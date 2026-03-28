@@ -1,0 +1,124 @@
+/* =========================================
+   BG7XCX 纯净白底 + 真·毛玻璃 UI (完美居中与小组件修复版)
+   ========================================= */
+
+:root {
+    --primary: #22252a;
+    --accent: #d35400;
+    --text-main: #333;
+    --text-muted: #777;
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-blur: 20px;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.9);
+    --glass-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    --font-family: 'Segoe UI', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+a { text-decoration: none; color: inherit; transition: var(--transition); }
+
+/* 头部与导航 */
+header { background: rgba(255,255,255,0.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 2.5rem 1rem; text-align: center; border-bottom: var(--glass-border); }
+header h1 { font-size: 2.5rem; color: #22252a; }
+
+nav { background: rgba(255,255,255,0.8); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: var(--glass-border); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; align-items: center; padding: 0 1rem; }
+.nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+.nav-links a { padding: 1rem 1.2rem; font-weight: 600; display: block; }
+.nav-links a:hover, .nav-links a.active { color: var(--accent); border-bottom: 3px solid var(--accent); }
+
+/* 主体容器 */
+.container { 
+    width: 95%; 
+    max-width: 1150px; 
+    margin: 2rem auto; 
+    display: grid; 
+    grid-template-columns: 280px 1fr; 
+    gap: 2rem; 
+    align-items: start; 
+}
+
+/* 玻璃卡片 */
+.glass-card { background: var(--glass-bg); backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur)); border: var(--glass-border); box-shadow: var(--glass-shadow); padding: 1.8rem; border-radius: 12px; margin-bottom: 1.5rem; }
+.glass-card h3 { font-size: 1.3rem; color: #22252a; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent); display: inline-block; }
+
+/* =========================================
+   修复：太阳与传播小组件专属排版
+   ========================================= */
+.solar-flex { 
+    display: flex; 
+    gap: 30px; 
+    justify-content: flex-start; 
+    align-items: flex-end; /* 关键修改：让两张图的底部完美对齐，不再参差不齐 */
+    flex-wrap: wrap; 
+    margin-top: 10px; 
+}
+.solar-item { text-align: center; }
+.solar-item p { font-size: 0.85rem; color: #777; margin-bottom: 10px; font-weight: 600; }
+
+/* 关键修改：取消强行圆形，改用统一的高级圆角矩形展示完整 NOAA 数据 */
+.nasa-wrapper { 
+    max-width: 250px; 
+    border-radius: 8px; /* 和右边的传播图保持一致的圆角 */
+    border: 2px solid #fff; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    background-color: #000; 
+    overflow: hidden; 
+    display: block; 
+}
+.nasa-wrapper img { width: 100%; height: auto; display: block; }
+
+/* 给传播图也加上统一的白边框，强迫症福音 */
+.n0nbh-img { 
+    max-width: 250px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    border: 2px solid #fff; 
+    display: block; 
+}
+
+/* 列表与备注 */
+.data-list { list-style: none; }
+.data-list li { padding: 0.8rem 0; border-bottom: 1px dashed rgba(0,0,0,0.1); display: flex; justify-content: flex-start; gap: 20px; font-size: 0.95rem; }
+.data-list li:last-child { border-bottom: none; }
+.data-list strong { color: #444; width: 80px; flex-shrink: 0; }
+.data-list span { color: #555; font-weight: 500; }
+.memo-card { border-left: 5px solid var(--accent); }
+
+/* QRZ / Clublog */
+.widget-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 1024px) { .widget-grid { grid-template-columns: 1fr 1fr; } }
+.iframe-wrapper { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 6px; }
+iframe.ham-widget { width: 100%; min-width: 450px; height: 350px; border: none; background: #fff; display: block; }
+
+/* QSL 画廊 */
+.qsl-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; }
+.qsl-item { border-radius: 12px; overflow: hidden; box-shadow: var(--glass-shadow); position: relative; border: var(--glass-border); background: rgba(255,255,255,0.8); }
+.qsl-item img { width: 100%; height: 200px; object-fit: cover; display: block; transition: var(--transition); }
+.qsl-item:hover img { transform: scale(1.05); }
+.qsl-title { padding: 15px; text-align: center; font-weight: bold; color: #22252a; border-top: var(--glass-border); }
+
+.btn { display: inline-block; background: #22252a; color: #fff; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 0.9rem; margin-top: 10px; }
+.btn:hover { background: var(--accent); }
+
+/* 手机自适应 */
+@media (max-width: 768px) {
+    .container { grid-template-columns: 1fr; gap: 1rem; width: 95%; }
+    nav { padding: 10px; }
+    .nav-links { gap: 8px; flex-wrap: wrap; }
+    .nav-links a { padding: 0.5rem 0.6rem; font-size: 0.9rem; border-bottom: none !important; }
+    .nav-links a.active { background: rgba(0,0,0,0.05); border-radius: 8px; }
+    .solar-flex { justify-content: center; }
+}
