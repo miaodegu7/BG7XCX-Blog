@@ -82,10 +82,10 @@ a {
 }
 
 .hero h1 {
-    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    font-size: clamp(3rem, 5.2vw, 4.6rem);
     color: #22252a;
-    letter-spacing: 0.04em;
-    margin-bottom: 0.45rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.55rem;
 }
 
 .hero p {
@@ -593,6 +593,39 @@ a {
 .home-section-card {
     margin-bottom: 0;
     padding: 2rem;
+}
+
+.home-logbook-panel {
+    padding-bottom: 1.85rem;
+}
+
+.home-logbook-frame {
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.home-logbook-frame .ham-widget {
+    height: 360px;
+}
+
+.home-left-propagation {
+    padding: 1.3rem;
+    margin-top: 0.85rem;
+}
+
+.propagation-widget-compact {
+    display: block;
+    overflow: hidden;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.74);
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+.propagation-widget-compact img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .home-links-card {
@@ -1146,8 +1179,9 @@ iframe.ham-widget {
 .qsl-item img {
     width: 100%;
     height: 220px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    background: linear-gradient(180deg, rgba(250, 249, 244, 0.96), rgba(232, 236, 243, 0.96));
     transition: transform 420ms ease;
 }
 
@@ -1156,11 +1190,36 @@ iframe.ham-widget {
 }
 
 .qsl-title {
-    padding: 15px;
+    padding: 15px 15px 6px;
     text-align: center;
     font-weight: bold;
     color: #22252a;
     border-top: var(--glass-border);
+}
+
+.qsl-note {
+    padding: 0 15px 15px;
+    text-align: center;
+    font-size: 0.92rem;
+    color: #58606e;
+}
+
+.qsl-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(20, 29, 45, 0.86);
+    color: #fff;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+}
+
+.qsl-item-featured {
+    box-shadow: 0 16px 40px rgba(17, 24, 39, 0.18);
+    border: 1px solid rgba(214, 157, 66, 0.55);
 }
 
 .btn {
