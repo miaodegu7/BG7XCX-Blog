@@ -6,61 +6,61 @@
     <title>比赛记录 - BG7XCX</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-shell">
 
-<header>
+<header class="hero reveal delay-1">
     <h1>BG7XCX</h1>
     <p>Shack in China | Exploring the infinite possibilities of radio waves</p>
 </header>
 
-<nav>
+<nav class="site-nav reveal delay-2">
     <div class="nav-links">
-        <a href="index.html">主页</a>
+        <a href="index.html">首页</a>
         <a href="blog.html">无线电日志</a>
-        <a href="qsl.html">QSL卡墙</a>
+        <a href="qsl.html">QSL 卡墙</a>
         <a href="contest.html" class="active">比赛记录</a>
         <a href="links.html">友链</a>
     </div>
 </nav>
 
-<div class="container">
+<div class="container page-enter">
     <aside class="sidebar">
-        <div class="glass-card">
+        <div class="glass-card reveal delay-3">
             <h3>简介</h3>
-            <p>在国际业余无线电比赛中锤炼通联技巧与设备性能的记录日志。</p>
+            <p>这里记录我参加过的重要业余无线电比赛，包括呼号使用、参赛模式、通联数量以及后续成绩补充。</p>
         </div>
     </aside>
 
     <main class="content">
-        <div class="glass-card">
-            <h3>Contest Log (比赛记录)</h3>
-            <p style="color: #888; margin-bottom: 1.5rem;">记录参与的重要业余无线电比赛数据。</p>
-            
-            <div style="overflow-x: auto; border-radius: 8px;">
-                <table style="width: 100%; border-collapse: collapse; min-width: 600px; text-align: left;">
+        <div class="glass-card reveal delay-3">
+            <h3>Contest Log（比赛记录）</h3>
+            <p class="section-intro">下面这张表用来整理比赛经历，方便后续回顾和继续补充成绩。</p>
+
+            <div class="table-shell">
+                <table class="contest-table">
                     <thead>
-                        <tr style="border-bottom: 2px solid #d35400;">
-                            <th style="padding: 12px; color: #22252a;">时间</th>
-                            <th style="padding: 12px; color: #22252a;">比赛名称</th>
-                            <th style="padding: 12px; color: #22252a;">呼号使用</th>
-                            <th style="padding: 12px; color: #22252a;">组别/模式</th>
-                            <th style="padding: 12px; color: #22252a;">QSO 数量</th>
+                        <tr>
+                            <th>时间</th>
+                            <th>比赛名称</th>
+                            <th>使用呼号</th>
+                            <th>组别 / 模式</th>
+                            <th>QSO 数量</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
-                            <td style="padding: 12px;">2026年2月</td>
-                            <td style="padding: 12px; font-weight: bold;">CQ WPX RTTY Contest</td>
-                            <td style="padding: 12px;">BG7XCX / 俱乐部呼号</td>
-                            <td style="padding: 12px;">SOAB / RTTY</td>
-                            <td style="padding: 12px;">等待最终确认</td>
+                        <tr>
+                            <td>2026 年 2 月</td>
+                            <td><strong>CQ WPX RTTY Contest</strong></td>
+                            <td>BG7XCX / 俱乐部呼号</td>
+                            <td>SOAB / RTTY</td>
+                            <td>等待最终确认</td>
                         </tr>
-                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
-                            <td style="padding: 12px;">2025年10月</td>
-                            <td style="padding: 12px; font-weight: bold;">CQ WW DX SSB</td>
-                            <td style="padding: 12px;">BG7XCX</td>
-                            <td style="padding: 12px;">SOAB / SSB</td>
-                            <td style="padding: 12px;">-</td>
+                        <tr>
+                            <td>2025 年 10 月</td>
+                            <td><strong>CQ WW DX SSB</strong></td>
+                            <td>BG7XCX</td>
+                            <td>SOAB / SSB</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>
@@ -69,9 +69,10 @@
     </main>
 </div>
 
-<footer style="text-align: center; padding: 2rem; color: #777; margin-top: 2rem; background: rgba(255,255,255,0.4); backdrop-filter: blur(5px);">
+<footer class="site-footer reveal delay-5">
     <p>&copy; 2026 BG7XCX Station. All Rights Reserved.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

@@ -6,55 +6,56 @@
     <title>无线电日志 - BG7XCX</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-shell">
 
-<header>
+<header class="hero reveal delay-1">
     <h1>BG7XCX</h1>
     <p>Shack in China | Exploring the infinite possibilities of radio waves</p>
 </header>
 
-<nav>
+<nav class="site-nav reveal delay-2">
     <div class="nav-links">
-        <a href="index.html">主页</a>
+        <a href="index.html">首页</a>
         <a href="blog.html" class="active">无线电日志</a>
-        <a href="qsl.html">QSL卡墙</a>
+        <a href="qsl.html">QSL 卡墙</a>
         <a href="contest.html">比赛记录</a>
         <a href="links.html">友链</a>
     </div>
 </nav>
 
-<div class="container">
+<div class="container page-enter">
     <aside class="sidebar">
-        <div class="glass-card">
+        <div class="glass-card reveal delay-3">
             <h3>简介</h3>
-            <p>这里记录了我的业余无线电技术探讨、设备调试日记和硬件 DIY 过程。</p>
+            <p>这里记录我的业余无线电折腾过程，包括设备调试、传播观察、数字模式、软件配置、卫星通信和各种 DIY 实验。</p>
         </div>
     </aside>
 
     <main class="content">
-        <div class="glass-card">
+        <div class="glass-card reveal delay-3">
             <h3>全部技术日志</h3>
-            
-            <div style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
-                <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: #22252a;">折腾日记：基于 ESP32-S3 制作太阳数据桌面摆件</h4>
-                <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">2026-03-08 | 硬件 DIY, 传播</p>
-                <p style="color: #333; margin-bottom: 1rem;">最近在折腾利用 ESP32-S3 抓取 HF Propagation 的数据，配合小屏幕做了一个桌面组件，方便随时观察传播情况...</p>
-                <a href="#" class="btn">阅读全文 &rarr;</a>
-            </div>
 
-            <div style="padding-bottom: 0.5rem;">
-                <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: #22252a;">ICOM-910卫星追踪搭建心得</h4>
-                <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">2026-02-20 | 设备调试, 卫星通信</p>
-                <p style="color: #333; margin-bottom: 1rem;">有关HRD与icom-910的联动问题</p>
+            <article class="post-preview featured-post">
+                <h4>折腾日志：基于 ESP32-S3 制作太阳数据桌面摆件</h4>
+                <p class="post-meta">2026-03-08 | 硬件 DIY，传播</p>
+                <p>最近在折腾利用 ESP32-S3 抓取 HF Propagation 数据，配合小屏幕做了一个桌面小组件，方便随时查看短波传播情况。</p>
                 <a href="#" class="btn">阅读全文 &rarr;</a>
-            </div>
+            </article>
+
+            <article class="post-preview">
+                <h4>ICOM-910 卫星追踪搭建心得</h4>
+                <p class="post-meta">2026-02-20 | 设备调试，卫星通信</p>
+                <p>这篇主要记录我在 HRD 与 ICOM-910 联动设置过程中遇到的问题，以及后面一点点调通的经验。</p>
+                <a href="#" class="btn">阅读全文 &rarr;</a>
+            </article>
         </div>
     </main>
 </div>
 
-<footer style="text-align: center; padding: 2rem; color: #777; margin-top: 2rem; background: rgba(255,255,255,0.4); backdrop-filter: blur(5px);">
+<footer class="site-footer reveal delay-5">
     <p>&copy; 2026 BG7XCX Station. All Rights Reserved.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
